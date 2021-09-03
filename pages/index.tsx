@@ -1,6 +1,6 @@
 import Head from "next/head";
 import React from "react";
-import Image from "next/image";
+import Banner from "../components/compose/Banner";
 import Navbar from "../components/compose/Navbar";
 
 export default function Home() {
@@ -12,7 +12,9 @@ export default function Home() {
       </Head>
 
       <Navbar />
+
       {/* Banner */}
+      <Banner />
     </div>
   );
 }
