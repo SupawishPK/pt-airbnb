@@ -5,6 +5,7 @@ import SmallCard from "@/components/core/SmallCard";
 import Navbar from "@/components/compose/Navbar";
 import Banner from "@/components/compose/Banner";
 import MediumCard from "@/components/core/MediumCard";
+import LargeCard from "@/components/core/LargeCard";
 
 interface IHome {
   exploreData: Array<ExploreData>;
@@ -38,12 +39,19 @@ const Home: React.FunctionComponent<IHome> = ({ exploreData, cardData }) => {
 
         <section>
           <h2 className="py-8 text-4xl font-semibold">Live Anywhere</h2>
-          <div className="flex p-3 -ml-3 space-x-3 overflow-scroll overflow-y-hidden">
+          <div className="flex p-3 -ml-3 space-x-3 overflow-auto ">
             {cardData?.map((item, index) => (
               <MediumCard {...item} key={index} />
             ))}
           </div>
         </section>
+
+        <LargeCard
+          img="https://links.papareact.com/4cj"
+          title="The Greatest Outdoors"
+          description="Wishlists curated by Airbyb."
+          buttonText="Get Inspired"
+        />
       </main>
     </div>
   );

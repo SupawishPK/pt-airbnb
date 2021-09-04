@@ -7,4 +7,6 @@ export interface ExploreData {
 export interface CardData {
   img: string;
   title: string;
+  description?: string;
+  buttonText?: string;
 }
