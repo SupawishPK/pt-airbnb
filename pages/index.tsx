@@ -6,6 +6,7 @@ import Navbar from "@/components/compose/Navbar";
 import Banner from "@/components/compose/Banner";
 import MediumCard from "@/components/core/MediumCard";
 import LargeCard from "@/components/core/LargeCard";
+import Footer from "@/components/compose/Footer";
 
 interface IHome {
   exploreData: Array<ExploreData>;
@@ -53,6 +54,8 @@ const Home: React.FunctionComponent<IHome> = ({ exploreData, cardData }) => {
           buttonText="Get Inspired"
         />
       </main>
+
+      <Footer />
     </div>
   );
 };
