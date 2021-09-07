@@ -24,7 +24,10 @@
       ],
       "@/components/*": [
         "components/*"
-      ]
+      ],
+      "@/services/*": [
+        "services/*"
+      ],
     }
   },
   "include": [

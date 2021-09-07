@@ -1,10 +1,16 @@
 import Footer from "@/components/compose/Footer";
 import Header from "@/components/compose/Header";
+import { IHeader } from "@/components/compose/Header/Header";
 import Head from "next/head";
 import React from "react";
 
-const MainLayout: React.FunctionComponent<{ children?: React.ReactNode }> = ({
+export interface IMainLayout extends IHeader {
+  children: React.ReactNode;
+}
+
+const MainLayout: React.FunctionComponent<IMainLayout> = ({
   children,
+  placeholder,
 }) => {
   return (
     <div>
@@ -12,7 +18,7 @@ const MainLayout: React.FunctionComponent<{ children?: React.ReactNode }> = ({
         <title>Airbib</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
+      <Header placeholder={placeholder} />
       {children}
       <Footer />
     </div>
