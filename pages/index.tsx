@@ -1,12 +1,10 @@
-import Head from "next/head";
 import React from "react";
 import { CardData, ExploreData } from "interfaces/model/Home";
 import SmallCard from "@/components/core/SmallCard";
-import Navbar from "@/components/compose/Navbar";
 import Banner from "@/components/compose/Banner";
 import MediumCard from "@/components/core/MediumCard";
 import LargeCard from "@/components/core/LargeCard";
-import Footer from "@/components/compose/Footer";
+import MainLayout from "@/components/layouts/MainLayout";
 
 interface IHome {
   exploreData: Array<ExploreData>;
@@ -14,18 +12,9 @@ interface IHome {
 }
 
 const Home: React.FunctionComponent<IHome> = ({ exploreData, cardData }) => {
-  // console.log(exploreData);
-
   return (
-    <div className="">
-      <Head>
-        <title>Airbib</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <Navbar />
+    <MainLayout>
       <Banner />
-
       <main className="px-8 mx-auto max-w-7xl sm:px-16">
         <section className="pt-6">
           <h2 className="pb-5 text-4xl font-semibold">Explore Nearby</h2>
@@ -54,9 +43,7 @@ const Home: React.FunctionComponent<IHome> = ({ exploreData, cardData }) => {
           buttonText="Get Inspired"
         />
       </main>
-
-      <Footer />
-    </div>
+    </MainLayout>
   );
 };
 
