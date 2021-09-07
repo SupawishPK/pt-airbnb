@@ -16,7 +16,7 @@ interface ISearch {
 
 const SearchPage: React.FunctionComponent<ISearch> = ({ searchResults }) => {
   const router = useRouter();
-  console.log("Search Result", searchResults);
+  // console.log("Search Result", searchResults);
   const { location, startDate, endDate, noOfGuests } = router.query;
   const formattedStartDate = format(
     new Date(startDate.toString()),

@@ -20,6 +20,7 @@ const InfoCard: React.FunctionComponent<InfoCard> = (props) => {
     <div className="flex px-2 pr-4 transition duration-200 ease-out border-b cursor-pointer py-7 hover:opacity-80 hover:shadow-lg first:border-t">
       <div className="relative flex-shrink-0 w-40 h-24 md:h-52 md:w-80">
         <Image
+        className="rounded-2xl"
           src={props.img}
           layout="fill"
           objectFit="cover"
