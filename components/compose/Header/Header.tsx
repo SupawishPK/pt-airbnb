@@ -45,8 +45,13 @@ const Header: React.FunctionComponent<IHeader> = ({ placeholder }) => {
         noOfGuests,
       },
     });
-    setSearchInput("");
+    if (router.pathname === "/search") {
+      setTimeout(() => {
+        setSearchInput("");
+      }, 1500);
+    }
   };
+  // pk.eyJ1Ijoic3VwYXdpc2gzNCIsImEiOiJja3Q5dHc1b2oxZmx6MnVzMXdtaTRzeHdyIn0.nNuVCr0JkQxGFGQ9r0IjVQ
 
   const selectedRange = {
     startDate: startDate,

@@ -9,6 +9,7 @@ import { GetServerSideProps } from "next";
 import SearchProvider from "@/services/search_provider";
 import { SearchResponse } from "interfaces/api/search";
 import InfoCard from "@/components/core/InfoCard";
+import Map from "@/components/core/Map";
 
 interface ISearch {
   searchResults: Array<SearchResponse>;
@@ -55,6 +56,10 @@ const SearchPage: React.FunctionComponent<ISearch> = ({ searchResults }) => {
               <InfoCard {...item} key={index} />
             ))}
           </div>
+        </section>
+
+        <section className="hidden xl:inline-flex xl:min-w-[600px]">
+          <Map searchResults={searchResults}/>
         </section>
       </main>
     </MainLayout>
